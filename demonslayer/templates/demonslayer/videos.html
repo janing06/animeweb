@@ -1,13 +1,24 @@
 {% include 'base.html' %}
 
 {% block content %}
-<div class="container text-center text-light">
+
+<div class="container-fluid text-center text-light">
         <h1>Demon Slayer Videos</h1>
         
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/peqHhVNKwyo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AGEuQ3Q6Tm4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+                <div class="col">
+                        <iframe class="vid" style="width: 400px; height: 350px;" src="https://www.youtube.com/embed/peqHhVNKwyo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="col">
+                        <iframe class="vid" style="width: 400px; height: 350px;" src="https://www.youtube.com/embed/AGEuQ3Q6Tm4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+          
+          
+              </div>
+        
+
+
 </div>
 
     
