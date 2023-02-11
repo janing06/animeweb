@@ -19,10 +19,11 @@ import environ
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
+env = environ.Env()
 
-# SECURITY WARNING: keep the secret key used in production secret!
+environ.Env.read_env()
+
+
 SECRET_KEY = "django-insecure-y$tjum1hq$81f3$zeyjfq8uelpsff71tmdwqbvgy$lx!w6&5oe"
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -87,7 +88,7 @@ WSGI_APPLICATION = "animeweb.wsgi.application"
 # }
 
 DATABASES = {
-    "default": dj_database_url.parse('postgres://mydb_j1a0_user:LDmAnxWSnZNEQMnQL2gDFZfeaUtsUg0F@dpg-cfjjvfda49903fk3ao1g-a.singapore-postgres.render.com/mydb_j1a0')
+    "default": dj_database_url.parse(env('DATABASE_URL'))
 }
 
 
