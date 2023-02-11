@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css\bootstrap.css' %}">
+    <title>AnimeWeb</title>
+    <style>
+        .container{
+            margin-top: 5%;
+            color: white;
+        }
+        body{
+            height: 5000px;
+            background-color: rgb(47, 47, 47);
+        }
+        @media (max-width: 767px) {
+            .container{
+            margin-top: 17%; 
+            }
+        }
+        .image{ 
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+        }
+        @media (max-width: 700px) {
+            .image{ 
+            background-size: cover;
+            background-position: center;
+            height: 650px;
+            }
+        }
+    </style>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div class="container text-light">
+        {% block content %}
+
+        
+        {% endblock %}
+    </div>
+
+<script src="{% static 'js\bootstrap.js' %}"></script>
+</body>
+</html>
